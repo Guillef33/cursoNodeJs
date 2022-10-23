@@ -1,5 +1,5 @@
 const express = require("express");
-const PORT = 3050;
+const PORT = process.env.PORT || 3050;
 
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
