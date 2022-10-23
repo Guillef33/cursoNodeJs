@@ -1,6 +1,19 @@
-let express = require("express");
-let app = express();
+const express = require("express");
+const PORT = 3050;
 
-console.log("Hello World");
+const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 
-module.exports = app;
+const app = express();
+
+// app.use(bodyParser.json());
+app.use(express.json());
+
+//Route
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+app.listen(PORT, () => {
+  console.log(`Server running on por ${PORT}`);
+  console.log(`Hello World`);
+});
